@@ -9,7 +9,7 @@
 
 .puzzle-piece {
     margin: 0 auto;
-    height: 600px;
+    width: 400px;
     border-radius: 30px;
     padding: 20px;
     filter: drop-shadow(0 0 2em #61dafbaa);
