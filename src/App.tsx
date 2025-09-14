@@ -63,7 +63,7 @@ function App() {
         {showPlaylist && (
           <>
             <iframe
-              width="100%"
+              width="80%"
               height="800"
               scrolling="no"
               frameBorder="no"
@@ -73,7 +73,7 @@ function App() {
             <div
               style={{
                 fontSize: "10px",
-                color: "#cccccc",
+                color: "white",
                 lineBreak: "anywhere",
                 wordBreak: "normal",
                 overflow: "hidden",
