@@ -30,13 +30,14 @@ function App() {
           backgroundColor: "#ff1987",
           borderRadius: "38px",
           margin: "5px auto",
+          color: "white",
         }}
       >
 {/*         <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" /> */}
-        
+        <h1>808-pynK-al3r7<h1>
+        <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
       </div>
-      <h1>808-pynK-al3r7<h1>
-      <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
+
       <h2>
         <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣</a>
       </h2>
