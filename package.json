@@ -1,7 +1,7 @@
 {
-  "name": "vite-react",
+  "name": "808-pynk-alert",
   "private": true,
-  "version": "0.0.0",
+  "version": "8.0.8",
   "type": "module",
   "scripts": {
     "dev": "vite",
