@@ -32,9 +32,11 @@ function App() {
           margin: "5px auto",
         }}
       >
-        <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />
+{/*         <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" /> */}
+        
       </div>
-      <h1>808-pynK-al3r7 🎟️🌸💙🄩🦄🧩🤫</h1>
+      <h1>808-pynK-al3r7<h1>
+      <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
       <h2>
         <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣</a>
       </h2>
