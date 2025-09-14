@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import daunicorn from "/daunic0rn.png";
+// import daunicorn from "/daunic0rn.png";
 import "./App.css";
 
 function App() {
@@ -33,8 +33,8 @@ function App() {
           color: "white",
         }}
       >
-{/*         <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" /> */}
-        <h1>808-pynK-al3r7<h1>
+        {/*<img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />*/}
+        <h1>808-pynK-al3r7</h1>
         <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
       </div>
 
