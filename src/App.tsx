@@ -26,31 +26,45 @@ function App() {
         <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />
       </div>
       <h1>808-pynK-al3r7 🎟️🌸💙🄩🦄🧩🤫</h1>
-      <h2>🏎️racedude5️⃣4️⃣</h2>
+      <h2>
+        <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣</a>
+      </h2>
       <hr />
       <div className="card">
+        <button
+          onClick={() => window.open("https://www.soundcloud.com/racedude")}
+        >
+          🔊🎵☁️
+        </button>
+        <br />
+        &nbsp; &nbsp;
         <button onClick={() => setCount((count) => count + 7)}>
           👉 🦄ℤ is {count === 1 ? `🎟️🤔? 🧩 ${lastTimeStamp}` : count}
         </button>
-        <br />
-        <br />
+        &nbsp; &nbsp;
         {showMagic && (
           <>
             <br />
+            <br />
+            <br />
+            <br />
             <button onClick={() => window.open("https://www.tymeis.art")}>
-              ⏲️⏰⌚️🕰️🕓 t(Z) {lastTimeStamp}
+              ???? ⏲️⏰⌚️🕰️🕓 t(Z) {lastTimeStamp} ????
             </button>
+            <br />
+            <br />
+            <br />
             <br />
           </>
         )}
         <hr />
         <div id="ring-control">
+          <br />
+          <br />
           <a href="https://th0th125.wtf/A5479">
             <button>⏮️ PREV</button>
           </a>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <span>08</span>
-          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span>&nbsp;08&nbsp;</span>
           <a href="https://63392.neocities.org/A5479">
             <button>NEXT ⏭️</button>
           </a>

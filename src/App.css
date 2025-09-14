@@ -3,10 +3,12 @@
     margin: 0 auto;
     padding: 1em;
     text-align: center;
+    font-family: monospace;
+    font-size: 1.5rem;
 }
 
 .puzzle-piece {
-    width: 808px;
+    max-width: 400px;
     border-radius: 30px;
     padding: 8rem;
     filter: drop-shadow(0 0 2em #61dafbaa);
@@ -27,7 +29,7 @@
     margin: 3em;
     padding: 2em;
     border: 1px solid #fef2f2;
-    border-radius: 420px;
+    border-radius: 42px;
 }
 
 .read-the-docs {
