@@ -64,7 +64,7 @@ function App() {
           <>
             <iframe
               width="100%"
-              height="300"
+              height="800"
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
