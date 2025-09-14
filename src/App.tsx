@@ -36,6 +36,7 @@ function App() {
         {/*<img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />*/}
         <h1>808-pynK-al3r7</h1>
         <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
+        <br/>
       </div>
 
       <h2>
