@@ -1,5 +1,5 @@
 #root {
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     padding: 1em;
     text-align: center;
@@ -8,27 +8,22 @@
 }
 
 .puzzle-piece {
-    max-width: 400px;
+    margin: 0 auto;
+    height: 600px;
     border-radius: 30px;
-    padding: 8rem;
+    padding: 20px;
     filter: drop-shadow(0 0 2em #61dafbaa);
     will-change: filter;
     transition: filter 300ms;
 }
 .puzzle-piece:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-        animation: logo-spin infinite 20s linear;
-    }
+    filter: drop-shadow(0 0 5em #646cffaa);
 }
 
 .card {
     margin: 3em;
     padding: 2em;
-    border: 1px solid #fef2f2;
+    border: 1px solid #ff1987;
     border-radius: 42px;
 }
 

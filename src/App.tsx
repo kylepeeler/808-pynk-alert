@@ -22,7 +22,13 @@ function App() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#ff1987", borderRadius: "38px" }}>
+      <div
+        style={{
+          backgroundColor: "#ff1987",
+          borderRadius: "38px",
+          margin: "5px auto",
+        }}
+      >
         <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />
       </div>
       <h1>808-pynK-al3r7 🎟️🌸💙🄩🦄🧩🤫</h1>
@@ -36,6 +42,7 @@ function App() {
         >
           🔊🎵☁️
         </button>
+        <br />
         <br />
         &nbsp; &nbsp;
         <button onClick={() => setCount((count) => count + 7)}>
