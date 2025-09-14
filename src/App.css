@@ -1,12 +1,12 @@
 #root {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1em;
     text-align: center;
 }
 
 .puzzle-piece {
-    height: 808px;
+    width: 808px;
     border-radius: 30px;
     padding: 8rem;
     filter: drop-shadow(0 0 2em #61dafbaa);

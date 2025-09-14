@@ -10,33 +10,38 @@ function App() {
     setLastTimestamp(`${timestamp}`);
   }, []);
 
-  const [showMagicButton, setMagic] = useState(false);
+  const [showMagic, setMagic] = useState(false);
   useEffect(() => {
     if (count >= 54) {
-      if (showMagicButton !== true) {
-        alert("pynk");
+      if (!showMagic) {
+        alert("L00k itZ a pynk 🦄 lololol <3");
       }
       setMagic(true);
     }
-  }, [count, setMagic, showMagicButton]);
+  }, [count, setMagic, showMagic]);
 
   return (
     <>
       <div style={{ backgroundColor: "#ff1987", borderRadius: "38px" }}>
         <img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />
       </div>
-      <h1>808-pynK-al3r7 🎟️🌸💙🄩🤫</h1>
+      <h1>808-pynK-al3r7 🎟️🌸💙🄩🦄🧩🤫</h1>
       <h2>🏎️racedude5️⃣4️⃣</h2>
       <hr />
       <div className="card">
         <button onClick={() => setCount((count) => count + 7)}>
-          👉 ℤ is {count === 1 ? `🎟️🤔? ${lastTimeStamp}` : count}
+          👉 🦄ℤ is {count === 1 ? `🎟️🤔? 🧩 ${lastTimeStamp}` : count}
         </button>
         <br />
-        {showMagicButton && (
-          <button onClick={() => window.open("https://www.tymeis.art")}>
-            ⏲️⏰⌚️🕰️🕓 t(Z) {lastTimeStamp}
-          </button>
+        <br />
+        {showMagic && (
+          <>
+            <br />
+            <button onClick={() => window.open("https://www.tymeis.art")}>
+              ⏲️⏰⌚️🕰️🕓 t(Z) {lastTimeStamp}
+            </button>
+            <br />
+          </>
         )}
         <hr />
         <div id="ring-control">
