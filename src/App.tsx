@@ -33,8 +33,10 @@ function App() {
           color: "white",
         }}
       >
+        <br/>
         {/*<img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />*/}
         <h1>808-pynK-al3r7</h1>
+        <br/>
         <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
         <br/>
       </div>
