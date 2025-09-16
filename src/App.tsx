@@ -9,8 +9,12 @@ function App() {
   const [showPlaylist, setShowPlaylist] = useState(true);
   const [lastTimeStamp, setLastTimestamp] = useState(new Date().toISOString());
   useEffect(() => {
-    const timestamp = Date.now();
-    setLastTimestamp(`${timestamp}`);
+    const interval = setInterval(() => {
+      const timestamp = Date.now();
+      setLastTimestamp(`${timestamp}`);
+    }, 1);
+
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -33,12 +37,12 @@ function App() {
           color: "white",
         }}
       >
-        <br/>
+        <br />
         {/*<img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />*/}
         <h1>808-pynK-al3r7</h1>
-        <br/>
+        <br />
         <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
-        <br/>
+        <br />
       </div>
 
       <h2>
