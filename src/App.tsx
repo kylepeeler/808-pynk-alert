@@ -39,9 +39,19 @@ function App() {
       >
         <br />
         {/*<img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />*/}
-        <h1>808-pynK-al3r7</h1>
+        <h1>808-pynK-a13r7</h1>
         <br />
-        <h2>🎟️🌸💙🄩🦄🧩🤫</h2>
+        <h2>
+          📻🎟️🌸💙
+          <a
+            href="https://github.com/kylepeeler/z"
+            title="I use this to start coding, and Zed is my editor, that's why I like 'Z'"
+            style={{ color: "#fff" }}
+          >
+            🆉
+          </a>
+          🦄🧩🤫😻
+        </h2>
         <br />
       </div>
 
@@ -120,7 +130,7 @@ function App() {
             <br />
             <br />
             <button onClick={() => window.open("https://www.tymeis.art")}>
-              ???? ⏲️⏰⌚️🕰️🕓 t(Z) {lastTimeStamp} ????
+              ???? ❤️⏲️⏰⌚️🕰️🕓 t(Z) == ? : {lastTimeStamp} 💎 🎉📻🎶🐬🎧💙 ????
             </button>
             <br />
             <br />
