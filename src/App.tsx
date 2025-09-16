@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(1);
   const [showMagic, setMagic] = useState(false);
-  const [showPlaylist, setShowPlaylist] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(true);
   const [lastTimeStamp, setLastTimestamp] = useState(new Date().toISOString());
   useEffect(() => {
     const timestamp = Date.now();
