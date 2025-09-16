@@ -29,6 +29,17 @@ function App() {
 
   return (
     <>
+      <a href="https://github.com/kylepeeler/808-pynk-alert">
+        <img
+          loading="lazy"
+          decoding="async"
+          width="149"
+          height="149"
+          src="https://github.blog/wp-content/uploads/2008/12/forkme_left_white_ffffff.png"
+          style={{ position: "absolute", left: 0, top: 0 }}
+          alt="Fork me(Z) on GitHub"
+        />
+      </a>
       <div
         style={{
           backgroundColor: "#ff1987",
@@ -38,7 +49,7 @@ function App() {
         }}
       >
         <br />
-        {/*<img src={daunicorn} className="puzzle-piece" alt="🦄🧩🅩" />*/}
+        {/*<img src={daunicorn} className="secret-puzzle-piece" alt="🦄🧩🅩" />*/}
         <h1>808-pynK-a13r7</h1>
         <br />
         <h2>
@@ -83,7 +94,7 @@ function App() {
         {showPlaylist && (
           <>
             <iframe
-              width="80%"
+              width="100%"
               height="800"
               scrolling="no"
               frameBorder="no"
@@ -93,14 +104,13 @@ function App() {
             <div
               style={{
                 fontSize: "10px",
-                color: "white",
+                color: "white!important",
                 lineBreak: "anywhere",
                 wordBreak: "normal",
                 overflow: "hidden",
                 whiteSpace: "nowrap",
                 textOverflow: "ellipsis",
-                fontFamily:
-                  "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+                fontFamily: "monospace",
                 fontWeight: 100,
               }}
             >

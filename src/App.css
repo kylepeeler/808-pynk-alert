@@ -16,17 +16,14 @@
     will-change: filter;
     transition: filter 300ms;
 }
+
 .puzzle-piece:hover {
     filter: drop-shadow(0 0 5em #646cffaa);
 }
 
 .card {
     margin: 3em;
-    padding: 2em;
+    padding-block: 20px;
     border: 1px solid #ff1987;
     border-radius: 42px;
-}
-
-.read-the-docs {
-    color: #888;
 }
