@@ -21,6 +21,7 @@ function App() {
     if (count >= 54) {
       if (!showMagic) {
         alert("L00k itZ a pynk 🦄 lololol <3");
+        window.open("https://unixtimestamp.com/", "_blank");
       }
       setMagic(true);
       setShowPlaylist(true);
@@ -86,7 +87,10 @@ function App() {
         <br />
         &nbsp; &nbsp;
         <button onClick={() => setCount((count) => count + 7)}>
-          👉 🦄ℤ is {count === 1 ? `🎟️🤔? 🧩 ${lastTimeStamp}` : count}
+          👉 🦄ℤ is{" "}
+          {count === 1
+            ? `🎟️🤔? 🧩 ${lastTimeStamp}`
+            : `🎟️🤔? ${count} && ${lastTimeStamp}`}
         </button>
         &nbsp; &nbsp;
         <br />
@@ -95,11 +99,11 @@ function App() {
           <>
             <iframe
               width="100%"
-              height="800"
+              height="1800"
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2077488516&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2077488516&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=false&visual=false"
             ></iframe>
             <div
               style={{

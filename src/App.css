@@ -26,3 +26,7 @@
     border: 1px solid #ff1987;
     border-radius: 42px;
 }
+
+iframe .visualAudible {
+    max-height: 300px;
+}
