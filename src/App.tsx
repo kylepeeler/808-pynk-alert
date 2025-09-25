@@ -30,17 +30,6 @@ function App() {
 
   return (
     <>
-      <a href="https://github.com/kylepeeler/808-pynk-alert">
-        <img
-          loading="lazy"
-          decoding="async"
-          width="149"
-          height="149"
-          src="https://github.blog/wp-content/uploads/2008/12/forkme_left_white_ffffff.png"
-          style={{ position: "absolute", left: 0, top: 0 }}
-          alt="Fork me(Z) on GitHub"
-        />
-      </a>
       <div
         style={{
           backgroundColor: "#ff1987",
