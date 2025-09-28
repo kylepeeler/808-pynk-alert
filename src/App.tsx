@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-// import daunicorn from "/daunic0rn.png";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
 
 function App() {
@@ -157,6 +157,7 @@ function App() {
       <p className="z-raffle-whaZZZZ">
         🎟 KARN9:K173:00420:83A6D 🤫🔢 K765A CyFi: ?zs113:#:K173 ⒵:racedude54
       </p>
+      <SpeedInsights />
       <Analytics />
     </>
   );
