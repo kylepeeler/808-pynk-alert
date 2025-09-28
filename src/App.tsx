@@ -70,6 +70,10 @@ function App() {
           🔊🎵☁️
         </button>
         &nbsp; &nbsp;
+        <button onClick={() => window.open("https://libraryoftime.xyz")}>
+          📚🕰️⌚️
+        </button>
+        &nbsp; &nbsp;
         <button onClick={() => setShowPlaylist(!showPlaylist)}>▶️📋⚡️</button>
         <br />
         <br />
