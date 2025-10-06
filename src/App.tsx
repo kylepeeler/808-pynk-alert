@@ -157,11 +157,16 @@ function App() {
           </a>
         </div>
       </div>
-      <p className="z-raffle-whaZZZZ">
-        🎟 KARN9:K173:00420:83A6D 🤫🔢 K765A CyFi: ?zs113:#:K173 ⒵:racedude54
-      </p>
-      <SpeedInsights />
-      <Analytics />
+      {showMagic && (
+        <>
+          <p className="z-raffle-whaZZZZ">
+            🎟 KARN9:K173:00420:83A6D 🤫🔢 K#❓#A CyFi: ¿zs113:#⁇:K173
+            ☁️ℤ→:racedude54
+          </p>
+          <SpeedInsights />
+          <Analytics />
+        </>
+      )}
     </>
   );
 }
