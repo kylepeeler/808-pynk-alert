@@ -61,7 +61,7 @@ function App() {
       <hr />
       <div className="card">
         <button onClick={() => window.open("https://racedude54.xyz/A5479")}>
-          💚🎪🪐
+          🔴🎪🪐
         </button>
         &nbsp; &nbsp;
         <button
