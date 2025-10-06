@@ -56,7 +56,7 @@ function App() {
       </div>
 
       <h2>
-        <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣</a>
+        <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣🆉</a>
       </h2>
       <hr />
       <div className="card">

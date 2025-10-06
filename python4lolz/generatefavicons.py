@@ -4,14 +4,14 @@ from PIL import Image
 
 # Create a pink square image (favicon size is typically 16x16)
 favicon_size = (16, 16)
-pynk_color = (255, 25, 135) #ff1987
-green_color = (128, 205, 84) #80cd54
+pynk_color = (255, 25, 135)  # ff1987
+infrared_color = (128, 205, 84)  # CC0808
 
 # Create the image
 faviconpynk = Image.new("RGB", favicon_size, pynk_color)
-favicongreen = Image.new("RGB", favicon_size, green_color)
+faviconred = Image.new("RGB", favicon_size, infrared_color)
 
 
 # Save as .ico file
 faviconpynk.save("../public/favicon.ico", format="ICO")
-favicongreen.save("../public/favicongreen.ico", format="ICO")
+faviconred.save("../public/faviconred.ico", format="ICO")
