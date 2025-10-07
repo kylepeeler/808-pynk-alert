@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import Figure from "./Figure";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(1);
-  const [showMagic, setMagic] = useState(false);
+  const [showMagik, setMagik] = useState(false);
+  const [showFigure, setShowFigure] = useState(false);
   const [showPlaylist, setShowPlaylist] = useState(true);
   const [lastTimeStamp, setLastTimestamp] = useState(new Date().toISOString());
   useEffect(() => {
@@ -18,15 +20,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (count >= 54) {
-      if (!showMagic) {
-        alert("L00k itZ a pynk 🦄 lololol <3");
-        window.open("https://unixtimestamp.com/", "_blank");
-      }
-      setMagic(true);
-      setShowPlaylist(true);
+    if (count >= 54 && !showMagik) {
+      //alert("L00k itZ a pynk 🦄 lololol <3");
+      //window.open("https://unixtimestamp.com/", "_blank");
+      setShowFigure(true);
+      setMagik(true);
     }
-  }, [count, setMagic, setShowPlaylist, showMagic]);
+    setShowPlaylist(true);
+  }, [count, setMagik, setShowPlaylist, showMagik]);
 
   return (
     <>
@@ -58,6 +59,9 @@ function App() {
       <h2>
         <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣🆉</a>
       </h2>
+      <div className="card">
+        {showFigure && <Figure currentTime={lastTimeStamp} />}
+      </div>
       <hr />
       <div className="card">
         <button onClick={() => window.open("https://racedude54.xyz/A5479")}>
@@ -129,7 +133,7 @@ function App() {
             </div>
           </>
         )}
-        {showMagic && (
+        {showMagik && (
           <>
             <br />
             <br />
@@ -157,7 +161,7 @@ function App() {
           </a>
         </div>
       </div>
-      {showMagic && (
+      {showMagik && (
         <>
           <p className="z-raffle-whaZZZZ">
             🎟 KARN9:K173:00420:83A6D 🤫🔢 K#❓#A CyFi: ¿zs113:#⁇:K173
