@@ -1,0 +1,4 @@
+# robots.txt
+# 2025-OCT-9 🎃
+User-agent: *
+Disallow: /
