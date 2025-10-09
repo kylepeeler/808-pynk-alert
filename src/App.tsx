@@ -64,8 +64,12 @@ function App() {
       </div>
       <hr />
       <div className="card">
-        <button onClick={() => window.open("https://racedude54.xyz/A5479")}>
+        <button onClick={() => window.open(`${window.location.origin}/A5479`)}>
           🔴🎪🪐
+        </button>
+        &nbsp; &nbsp;
+        <button onClick={() => window.open(`${window.location.origin}/808`)}>
+          🩷🎟️🦄
         </button>
         &nbsp; &nbsp;
         <button

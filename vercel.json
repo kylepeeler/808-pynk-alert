@@ -2,6 +2,6 @@
   "rewrites": [
     { "source": "/808", "destination": "/808.html" },
     { "source": "/A5479", "destination": "/A5479.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }
