@@ -21,7 +21,7 @@ function App() {
     if (count >= 54) {
       if (!showMagic) {
         alert("L00k itZ a pynk 🦄 lololol <3");
-        window.open("https://unixtimestamp.com/", "_blank");
+        window.open("https://libraryoftime.xyz", "_blank");
       }
       setMagic(true);
       setShowPlaylist(true);
@@ -164,8 +164,8 @@ function App() {
       {showMagic && (
         <>
           <p className="z-raffle-whaZZZZ">
-            🎟 KARN9:K173:00420:83A6D 🤫🔢 K#❓#A CyFi: ¿zs113:#⁇:K173
-            ☁️ℤ→:racedude54
+            🎟 KARN9:K173:00420:83A6D 🤫🔢 K#❓#A CyFi: ¿zs113:#⁇:K173 ☁️ℤ→:
+            <a href="https://soundcloud.com/racedude">racedude</a>
           </p>
           <SpeedInsights />
           <Analytics />
