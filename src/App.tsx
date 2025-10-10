@@ -20,13 +20,15 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (count >= 54 && !showMagik) {
-      //alert("L00k itZ a pynk 🦄 lololol <3");
-      //window.open("https://unixtimestamp.com/", "_blank");
+    if (count >= 54) {
+      if (!showMagik) {
+        alert("L00k itZ a pynk 🦄 lololol <3");
+        window.open("https://libraryoftime.xyz", "_blank");
+      }
       setShowFigure(true);
       setMagik(true);
+      setShowPlaylist(true);
     }
-    setShowPlaylist(true);
   }, [count, setMagik, setShowPlaylist, showMagik]);
 
   return (
@@ -165,16 +167,8 @@ function App() {
           </a>
         </div>
       </div>
-      {showMagik && (
-        <>
-          <p className="z-raffle-whaZZZZ">
-            🎟 KARN9:K173:00420:83A6D 🤫🔢 K#❓#A CyFi: ¿zs113:#⁇:K173
-            ☁️ℤ→:racedude54
-          </p>
-          <SpeedInsights />
-          <Analytics />
-        </>
-      )}
+      <SpeedInsights />
+      <Analytics />
     </>
   );
 }
