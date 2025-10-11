@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(1);
-  const [showMagik, setMagik] = useState(false);
+  const [showMagik, setShowMagik] = useState(false);
   const [showFigure, setShowFigure] = useState(false);
   const [showPlaylist, setShowPlaylist] = useState(true);
   const [lastTimeStamp, setLastTimestamp] = useState(new Date().toISOString());
@@ -28,10 +28,10 @@ function App() {
         window.open("https://libraryoftime.xyz", "_blank");
       }
       setShowFigure(true);
-      setMagik(true);
+      setShowMagik(true);
       setShowPlaylist(true);
     }
-  }, [count, setMagik, setShowPlaylist, showMagik]);
+  }, [count, setShowMagik, setShowPlaylist, showMagik]);
 
   return (
     <>

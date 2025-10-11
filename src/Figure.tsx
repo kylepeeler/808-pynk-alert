@@ -140,7 +140,7 @@ const GoFigure = ({
                 style={{
                   width: `${Math.min(purrcent - 101, 12)}%`,
                   height: "100%",
-                  backgroundColor: "",
+                  backgroundColor: "#CC0808",
                   position: "absolute",
                   left: "101%",
                   transition: "width 0.1s ease-out",
