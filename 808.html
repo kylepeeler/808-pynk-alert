@@ -36,17 +36,19 @@
             }
 
             .image-container {
-                display: none;
+                opacity: 0;
                 max-width: 90vw;
                 max-height: 70vh;
                 border: 3px solid white;
                 border-radius: 10px;
                 overflow: hidden;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                pointer-events: none;
             }
 
             .image-container.show {
-                display: block;
+                opacity: 1;
+                pointer-events: auto;
                 animation: fadeIn 0.5s ease-in;
             }
 
@@ -123,15 +125,13 @@
                     container.classList.remove("show");
                     container.classList.add("hide");
 
-                    // Wait for fade out animation to complete before hiding
+                    // Wait for fade out animation to complete before removing hide class
                     setTimeout(() => {
-                        container.style.display = "none";
                         container.classList.remove("hide");
                     }, 500);
 
                     button.textContent = "🦄";
                 } else {
-                    container.style.display = "block";
                     container.classList.add("show");
                     button.textContent = "🧩";
                 }
