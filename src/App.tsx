@@ -60,7 +60,9 @@ function App() {
       </div>
 
       <h2>
-        <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣.xy🆉</a>
+        <a href="https://www.soundcloud.com/racedude">
+          🎧☁️🏎️racedude5️⃣4️⃣.(xy)🆉
+        </a>
       </h2>
       {showFigure && (
         <>
@@ -153,7 +155,7 @@ function App() {
             <br />
             <br />
             <button onClick={() => window.open("https://www.tymeis.art")}>
-              ???? ❤️⏲️⏰⌚️🕰️🕓 t(Z) == ? : {lastTimeStamp} 💎 🎉📻🎶🐬🎧💙 ????
+              ???? ❤️⏲️⏰⌚️🕰️🕓 t(Z) == ? : {lastTimeStamp} 💎🎉📻🎶🐬🎧💙 ????
             </button>
             <br />
             <br />
