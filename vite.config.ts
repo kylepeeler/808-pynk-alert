@@ -12,6 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        footbook: resolve(__dirname, "footbook.html"),
         "808": resolve(__dirname, "808.html"),
         A5479: resolve(__dirname, "A5479.html"),
       },

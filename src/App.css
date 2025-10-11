@@ -30,3 +30,7 @@
 iframe .visualAudible {
     max-height: 300px;
 }
+
+* {
+    font-family: monospace;
+}
