@@ -152,25 +152,17 @@ function App() {
         <div id="ring-control">
           <br />
           <br />
-          <a href="https://th0th125.wtf/A5479">
+          <a href="https://moonbase01.neocities.org/A5479">
             <button>⏮️ PREV</button>
           </a>
           <span>&nbsp;08&nbsp;</span>
-          <a href="https://63392.neocities.org/A5479">
+          <a href="https://owl13.neocities.org/A5479">
             <button>NEXT ⏭️</button>
           </a>
         </div>
       </div>
-      {showMagic && (
-        <>
-          <p className="z-raffle-whaZZZZ">
-            🎟 KARN9:K173:00420:83A6D 🤫🔢 K#❓#A CyFi: ¿zs113:#⁇:K173 ☁️ℤ→:
-            <a href="https://soundcloud.com/racedude">racedude</a>
-          </p>
-          <SpeedInsights />
-          <Analytics />
-        </>
-      )}
+      <SpeedInsights />
+      <Analytics />
     </>
   );
 }
