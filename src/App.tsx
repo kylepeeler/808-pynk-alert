@@ -22,8 +22,10 @@ function App() {
   useEffect(() => {
     if (count >= 54) {
       if (!showMagik) {
-        alert("L00k itZ a pynk 🦄 lololol <3");
-        // window.open("https://libraryoftime.xyz", "_blank");
+        alert(
+          "L00k itZ a pynk 🦄 lololol 🩷, explore what tyme ⌚️ iZ and come back 🎃",
+        );
+        window.open("https://libraryoftime.xyz", "_blank");
       }
       setShowFigure(true);
       setMagik(true);
@@ -43,8 +45,7 @@ function App() {
       >
         <br />
         <h1>808-pynK-a13r7</h1>
-        <br />
-        <h2>
+        <h4>
           📻🎟️🌸💙
           <a
             href="https://github.com/kylepeeler/z"
@@ -54,17 +55,21 @@ function App() {
             🆉
           </a>
           🦄🧩🤫😻
-        </h2>
+        </h4>
         <br />
       </div>
 
       <h2>
-        <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣🆉</a>
+        <a href="https://www.soundcloud.com/racedude">🏎️racedude5️⃣4️⃣.xy🆉</a>
       </h2>
-      <div className="card">
-        {showFigure && <Figure currentTime={lastTimeStamp} />}
-      </div>
-      <hr />
+      {showFigure && (
+        <>
+          <div className="card">
+            <Figure currentTime={lastTimeStamp} />
+          </div>
+          <hr />
+        </>
+      )}
       <div className="card">
         <button onClick={() => window.open(`${window.location.origin}/A5479`)}>
           🔴🎪🪐
@@ -84,7 +89,9 @@ function App() {
           📚🕰️⌚️
         </button>
         &nbsp; &nbsp;
-        <button onClick={() => setShowPlaylist(!showPlaylist)}>▶️📋⚡️</button>
+        <button onClick={() => setShowPlaylist(!showPlaylist)}>
+          {showPlaylist ? "⏸️📋⚡️" : "▶️📋⚡️"}
+        </button>
         <br />
         <br />
         &nbsp; &nbsp;
@@ -105,7 +112,7 @@ function App() {
               scrolling="no"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2077488516&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=false&visual=false"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2077488516&color=%23ff5500&start_track=0&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=true&show_teaser=false&visual=false"
             ></iframe>
             <div
               style={{

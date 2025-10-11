@@ -30,12 +30,12 @@ const GoFigure = ({
       // After LEEP, interpolate between Y and M, skipping 100%
       const percent = 101 - ((fig - 5533) / (44100 - 5533)) * 2;
       // Skip 100% and above - clamp to 99.9% if at or above 100%
-      return percent >= 100 ? 99.9 : percent;
+      return percent >= 100.0 ? 99.9 : percent;
     }
-    if (fig === 44100) return 99; // M: ready-to-rok
+    if (fig === 44100) return 99.9; // M: ready-to-rok
     if (fig < 144000) {
       // M to A range: 44100 to 144000 maps to 99% to 0%
-      return 99 - ((fig - 44100) / (144000 - 44100)) * 99;
+      return 99.9 - ((fig - 44100) / (144000 - 44100)) * 99.9;
     }
     return 0; // A: begin-the-beguine
   };
@@ -115,19 +115,19 @@ const GoFigure = ({
               style={{
                 width: `${Math.min(purrcent, 99)}%`,
                 height: "100%",
-                backgroundColor: "green",
+                backgroundColor: "#FF1987",
                 position: "absolute",
                 left: 0,
                 transition: "width 0.1s ease-out",
               }}
             />
-            {/* Magenta bar for LEEP zone (99-101%) */}
+            {/* green bar for LEEP zone (99-101%) */}
             {purrcent > 99 && (
               <div
                 style={{
                   width: `${Math.min(purrcent - 99, 2)}%`,
                   height: "100%",
-                  backgroundColor: "#ff1987",
+                  backgroundColor: "#9ACC54",
                   position: "absolute",
                   left: "99%",
                   transition: "width 0.1s ease-out",
@@ -165,6 +165,10 @@ const GoFigure = ({
               {purrcent === 0 && " (begin-the-beguine)"}
               {purrcent === 99 && " (ready-to-rok)"}
               {purrcent === 113 && " (done, haapning)"}
+              {purrcent !== 0 &&
+                purrcent !== 99 &&
+                purrcent !== 113 &&
+                " (in-progress)"}
             </div>
           </div>
 
