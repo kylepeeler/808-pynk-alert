@@ -23,7 +23,7 @@ function App() {
     if (count >= 54) {
       if (!showMagik) {
         alert("L00k itZ a pynk 🦄 lololol <3");
-        window.open("https://libraryoftime.xyz", "_blank");
+        // window.open("https://libraryoftime.xyz", "_blank");
       }
       setShowFigure(true);
       setMagik(true);

@@ -11,7 +11,8 @@ const GoFigure = ({
   if (typeof time === "string") {
     time = Number(currentTime);
   }
-  const [figure, setFigure] = useState(0); // Default to A (begin-the-beguine)
+  const [figure, setFigure] = useState(144000); // Default to A (begin-the-beguine)
+  const [isDragging, setIsDragging] = useState(false);
 
   // Figure ranges with leap logic
   // A to M: 144000 to 44100
@@ -26,8 +27,10 @@ const GoFigure = ({
       return 113 - ((fig - 2255) / (5533 - 2255)) * 12;
     }
     if (fig < 44100) {
-      // After LEEP, interpolate between Y and M
-      return 101 - ((fig - 5533) / (44100 - 5533)) * 2;
+      // After LEEP, interpolate between Y and M, skipping 100%
+      const percent = 101 - ((fig - 5533) / (44100 - 5533)) * 2;
+      // Skip 100% and above - clamp to 99.9% if at or above 100%
+      return percent >= 100 ? 99.9 : percent;
     }
     if (fig === 44100) return 99; // M: ready-to-rok
     if (fig < 144000) {
@@ -71,93 +74,191 @@ const GoFigure = ({
         </label>
       </div>
 
-      <div style={{ marginBottom: "20px" }}>
-        <label>
-          Figure: {figure}
-          <input
-            type="range"
-            min={2255}
-            max={144000}
-            value={figure}
-            onChange={(e) => setFigure(Number(e.target.value))}
-            style={{ width: "400px", marginLeft: "10px" }}
-          />
-        </label>
-        <div style={{ fontSize: "12px", marginTop: "5px", color: "#666" }}>
-          {figure >= 144000 && "A: begin-the-beguine"}
-          {figure === 44100 && "M: ready-to-rok"}
-          {figure <= 2255 && "Z: done, haapning"}
+      <div
+        style={{
+          marginBottom: "20px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          textAlign: "center",
+          userSelect: "none",
+          WebkitUserSelect: "none",
+        }}
+      >
+        {/* Text labels above */}
+        <div style={{ marginBottom: "5px" }}>
+          <div>Figure: {figure}</div>
+          <div>Purrcent: {purrcent.toFixed(1)}%</div>
         </div>
-      </div>
 
-      <div style={{ marginBottom: "20px" }}>
-        <div>Purrcent: {purrcent.toFixed(1)}%</div>
-        <div style={{ fontSize: "12px", color: "#666" }}>
-          {purrcent === 0 && "(begin-the-beguine)"}
-          {purrcent === 99 && "(ready-to-rok)"}
-          {purrcent === 113 && "(done, haapning)"}
-        </div>
+        {/* Overlapping container */}
         <div
           style={{
-            width: "400px",
-            height: "30px",
-            backgroundColor: "#e0e0e0",
-            borderRadius: "5px",
-            marginTop: "10px",
+            width: "100%",
+            maxWidth: "420px",
+            marginInline: "auto",
+            height: "40px",
             position: "relative",
-            overflow: "hidden",
           }}
         >
-          {/* Green bar for 0-99% */}
+          {/* Progress bar (bottom layer) */}
           <div
             style={{
-              width: `${Math.min(purrcent, 99)}%`,
-              height: "100%",
-              backgroundColor: "#00ff00",
+              width: "100%",
+              height: "30px",
+              backgroundColor: "white",
               position: "absolute",
-              left: 0,
-              transition: "width 0.1s ease-out",
-            }}
-          />
-          {/* Magenta bar for LEEP zone (99-101%) */}
-          {purrcent > 99 && (
-            <div
-              style={{
-                width: `${Math.min(purrcent - 99, 2)}%`,
-                height: "100%",
-                backgroundColor: "#ff00ff",
-                position: "absolute",
-                left: "99%",
-                transition: "width 0.1s ease-out",
-              }}
-            />
-          )}
-          {/* Red bar for 101-113% */}
-          {purrcent > 101 && (
-            <div
-              style={{
-                width: `${Math.min(purrcent - 101, 12)}%`,
-                height: "100%",
-                backgroundColor: "#ff0000",
-                position: "absolute",
-                left: "101%",
-                transition: "width 0.1s ease-out",
-              }}
-            />
-          )}
-          {/* Percentage text overlay */}
-          <div
-            style={{
-              position: "absolute",
-              right: "10px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              color: "#000",
-              fontWeight: "bold",
-              textShadow: "0 0 3px rgba(255,255,255,0.8)",
+              bottom: "5px",
             }}
           >
-            {purrcent > 0 && `${purrcent.toFixed(1)}%`}
+            {/* Green bar for 0-99% */}
+            <div
+              style={{
+                width: `${Math.min(purrcent, 99)}%`,
+                height: "100%",
+                backgroundColor: "green",
+                position: "absolute",
+                left: 0,
+                transition: "width 0.1s ease-out",
+              }}
+            />
+            {/* Magenta bar for LEEP zone (99-101%) */}
+            {purrcent > 99 && (
+              <div
+                style={{
+                  width: `${Math.min(purrcent - 99, 2)}%`,
+                  height: "100%",
+                  backgroundColor: "#ff1987",
+                  position: "absolute",
+                  left: "99%",
+                  transition: "width 0.1s ease-out",
+                }}
+              />
+            )}
+            {/* Red bar for 101-113% */}
+            {purrcent > 101 && (
+              <div
+                style={{
+                  width: `${Math.min(purrcent - 101, 12)}%`,
+                  height: "100%",
+                  backgroundColor: "",
+                  position: "absolute",
+                  left: "101%",
+                  transition: "width 0.1s ease-out",
+                }}
+              />
+            )}
+            {/* Percentage text overlay */}
+            <div
+              style={{
+                position: "absolute",
+                right: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "#000",
+                userSelect: "none",
+                WebkitUserSelect: "none",
+                fontWeight: "bold",
+                textShadow: "0 0 3px rgba(255,255,255,0.8)",
+              }}
+            >
+              {`${purrcent.toFixed(1)}%`}
+              {purrcent === 0 && " (begin-the-beguine)"}
+              {purrcent === 99 && " (ready-to-rok)"}
+              {purrcent === 113 && " (done, haapning)"}
+            </div>
+          </div>
+
+          {/* Slider (top layer) */}
+          <div
+            style={{
+              width: "100%",
+              height: "40px",
+              backgroundColor: "#333",
+              position: "absolute",
+              top: 0,
+              cursor: isDragging ? "grabbing" : "grab",
+              touchAction: "none",
+              opacity: 0.5,
+            }}
+            onMouseDown={(e) => {
+              setIsDragging(true);
+              const rect = e.currentTarget.getBoundingClientRect();
+              const updateFigure = (clientX: number) => {
+                const x = Math.max(
+                  0,
+                  Math.min(clientX - rect.left, rect.width),
+                );
+                const percent = x / rect.width;
+                const newFigure = Math.round(
+                  144000 - percent * (144000 - 2255),
+                );
+                setFigure(newFigure);
+              };
+
+              updateFigure(e.clientX);
+
+              const handleMouseMove = (e: MouseEvent) =>
+                updateFigure(e.clientX);
+              const handleMouseUp = () => {
+                setIsDragging(false);
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+              };
+
+              document.addEventListener("mousemove", handleMouseMove);
+              document.addEventListener("mouseup", handleMouseUp);
+            }}
+            onTouchStart={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              const updateFigure = (clientX: number) => {
+                const x = Math.max(
+                  0,
+                  Math.min(clientX - rect.left, rect.width),
+                );
+                const percent = x / rect.width;
+                const newFigure = Math.round(
+                  144000 - percent * (144000 - 2255),
+                );
+                setFigure(newFigure);
+              };
+
+              const touch = e.touches[0];
+              updateFigure(touch.clientX);
+
+              const handleTouchMove = (e: TouchEvent) => {
+                e.preventDefault();
+                updateFigure(e.touches[0].clientX);
+              };
+              const handleTouchEnd = () => {
+                document.removeEventListener("touchmove", handleTouchMove);
+                document.removeEventListener("touchend", handleTouchEnd);
+              };
+
+              document.addEventListener("touchmove", handleTouchMove, {
+                passive: false,
+              });
+              document.addEventListener("touchend", handleTouchEnd);
+            }}
+          >
+            {/* Slider thumb */}
+            <div
+              style={{
+                position: "absolute",
+                left: `${((144000 - figure) / (144000 - 2255)) * 100}%`,
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "20px",
+                height: "100%",
+                background: "white",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                borderRadius: "8px",
+                boxShadow:
+                  "0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
+                transition: "left 0.05s ease-out",
+              }}
+            />
           </div>
         </div>
       </div>
