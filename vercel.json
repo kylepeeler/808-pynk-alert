@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/808", "destination": "/808.html" },
     { "source": "/A5479", "destination": "/A5479.html" },
+    { "source": "/hi-today-is", "destination": "/hi-today-is.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }

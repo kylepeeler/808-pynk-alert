@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="gL1sh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="CYBR" content="CY1754963-Q1525-LA" />
+        <title>#FF1987 🎪🎟🦄</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: #317ccc;
+                margin: 0;
+                padding: 20px;
+                font-family: monospace;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                background: black;
+                color: white;
+            }
+
+            .back-btn {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                background: rgba(255, 255, 255, 0.5);
+                border: 1px solid white;
+                border-radius: 20px;
+                padding: 8px 16px;
+                color: #eeefff;
+                text-decoration: none;
+                font-size: 14px;
+                cursor: alias;
+                transition: all 0.3s ease;
+            }
+
+            .back-btn:hover {
+                background: rgba(255, 255, 255, 0.8);
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/" class="back-btn">Go 🔙</a>
+        <br />
+        <div id="content">
+            <h1>hi-today-is</h1>
+            <h2 id="current-datetime"></h2>
+            <pre>[Z]{ yer:kall }</pre>
+        </div>
+
+        <script>
+            function updateDateTime() {
+                const now = new Date();
+                const options = {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                };
+                document.getElementById("current-datetime").textContent =
+                    now.toLocaleDateString("en-US", options);
+            }
+
+            // Update immediately and then every second
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        </script>
+    </body>
+</html>
